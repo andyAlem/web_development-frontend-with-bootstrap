@@ -24,7 +24,7 @@ class MyServer(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(f.read())
 
-        except Exception as e:gi
+        except Exception as e:
             try:
                 self.send_error(500, f"Error: {str(e)}")
             except BrokenPipeError:
